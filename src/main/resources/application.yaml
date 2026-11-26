@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: erp-auth
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:${POSTGRES_PORT:15431}/auth_db}
+    username: ${SPRING_DATASOURCE_USERNAME:auth_app}
+    password: ${SPRING_DATASOURCE_PASSWORD:auth_local}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: ${SERVER_PORT:8081}
